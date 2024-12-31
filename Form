@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AMAJAzz Affiliation Form</title>
+</head>
+<body>
+    <h1>AMAJAzz Affiliation Form</h1>
+
+    <form action="" method="post">
+        <fieldset>
+            <legend><strong>Personal Information</strong></legend>
+
+            <label for="name">Name:</label><br>
+            <input type="text" id="name" name="name" required><br><br>
+
+            <label for="surname">Surname(s):</label><br>
+            <input type="text" id="surname" name="surname" required><br><br>
+
+            <label for="id">ID/Passport Number (DNI/NIF):</label><br>
+            <input type="text" id="id" name="id" required><br><br>
+
+            <label for="nationality">Nationality:</label><br>
+            <input type="text" id="nationality" name="nationality" required><br><br>
+
+            <label for="dob">Date of Birth:</label><br>
+            <input type="date" id="dob" name="dob" required><br><br>
+        </fieldset>
+
+        <fieldset>
+            <legend><strong>Address</strong></legend>
+
+            <label for="address">Street Address:</label><br>
+            <input type="text" id="address" name="address" required><br><br>
+
+            <label for="city">City/Town:</label><br>
+            <input type="text" id="city" name="city" required><br><br>
+
+            <label for="postal_code">Postal Code:</label><br>
+            <input type="text" id="postal_code" name="postal_code" required><br><br>
+
+            <label for="province">Province:</label><br>
+            <input type="text" id="province" name="province" required><br><br>
+        </fieldset>
+
+        <fieldset>
+            <legend><strong>Contact Information</strong></legend>
+
+            <label for="phone">Phone Number:</label><br>
+            <input type="tel" id="phone" name="phone" required><br><br>
+
+            <label for="mobile">Mobile Number:</label><br>
+            <input type="tel" id="mobile" name="mobile"><br><br>
+
+            <label for="email">Email Address:</label><br>
+            <input type="email" id="email" name="email" required><br><br>
+        </fieldset>
+
+        <fieldset>
+            <legend><strong>Fees</strong></legend>
+
+            <p>I AUTHORIZE the payment collection starting from the present date.</p>
+
+            <label for="bank">Bank Account Information (C.C.C.):</label><br>
+            <input type="text" id="bank" name="bank" placeholder="Bank - Branch - D.C. - Account Number" required><br><br>
+        </fieldset>
+
+        <fieldset>
+            <legend><strong>Observations</strong></legend>
+            <label for="observations">Comments or Observations:</label><br>
+            <textarea id="observations" name="observations" rows="5" cols="50"></textarea><br><br>
+        </fieldset>
+
+        <p>By signing, I acknowledge that I am aware of and accept the statutes of AMAJAzz (Asociación Malagueña de Amantes del Jazz). I also authorize the payment of membership fees (€10 per month) starting from this date.</p>
+
+        <label for="signature_date">Date:</label>
+        <input type="date" id="signature_date" name="signature_date" required><br><br>
+
+        <label for="signature">Signature:</label><br>
+        <input type="text" id="signature" name="signature" placeholder="Type your full name" required><br><br>
+
+        <button type="submit">Submit</button>
+    </form>
+</body>
+</html>
+
