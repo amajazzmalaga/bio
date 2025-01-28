@@ -10,18 +10,24 @@
             rel="stylesheet"
             href="https://cdn.jsdelivr.net/npm/@picocss/pico@2/css/pico.css"
         />
+        <link rel="icon" href="./favicon.ico" />
         <style>
-            body {
-                background-color: #FFC0CB; /* Reverted to the original pink background */
+            html, body {
+                margin: 0;
+                padding: 0;
+                background-color: #ffb6c1; /* Pink background */
                 color: #fff; /* White text */
-                margin-right: 15%; /* Reduced right margin */
+            }
+
+            .container {
+                max-width: 100%; /* Ensure full width for content */
             }
 
             .header {
                 display: flex;
                 gap: 1rem;
                 align-items: center;
-                padding-bottom: 1rem;
+                padding-bottom: 0.2rem; /* Further reduced space below header */
             }
 
             .header > img {
@@ -39,7 +45,7 @@
                 display: flex;
                 justify-content: center;
                 align-items: center;
-                margin: 0.5rem 0;
+                margin: 0.2rem 0; /* Reduce space above and below image */
             }
 
             .center-image > img {
@@ -52,29 +58,40 @@
                 display: flex;
                 justify-content: center;
                 gap: 1.5rem;
-                margin-top: 1rem;
+                margin-top: 0.2rem; /* Move links closer to subtitle text */
                 flex-wrap: wrap;
-                margin-bottom: 2rem; /* Adding space below links */
+                margin-bottom: 0.5rem; /* Reduce space below links */
             }
 
             .links > a {
                 text-decoration: none;
                 color: #fff;
+                transition: all 0.3s ease;
+            }
+
+            .links > a:hover {
+                color: #000;
+                background-color: rgba(255, 255, 255, 0.3);
+                padding: 0.2rem 0.5rem;
+                border-radius: 0.5rem;
             }
 
             /* Media Query for Mobile Devices */
             @media (max-width: 768px) {
-                body {
-                    margin-left: 15%; /* Reduced left margin */
-                    margin-right: 15%; /* Reduced right margin */
-                }
-
                 .center-image > img {
-                    max-width: 80%; /* Make the image smaller on mobile */
+                    max-width: 120%; /* Increase image size by 50% */
                 }
 
                 .links {
-                    margin-bottom: 60%; /* Reduced bottom margin on mobile */
+                    margin-bottom: 1rem; /* Limit bottom margin on mobile */
+                }
+
+                body {
+                    min-height: 100vh; /* Ensure content extends fully on mobile */
+                }
+
+                main {
+                    margin-bottom: 0; /* Stop extra pink background below content */
                 }
             }
         </style>
@@ -83,7 +100,7 @@
         <main class="container">
             <!-- Header Section -->
             <header class="header">
-                <img src="./amajazz.png" alt="Amajazz logo" />
+                <img src="./amajazz.png" alt="Amajazz logo - a round jazz-themed logo" />
                 <hgroup>
                     <h1>Amajazz</h1>
                     <p>Asociación Malagueña de Amantes del Jazz</p>
@@ -91,7 +108,7 @@
             </header>
 
             <!-- Links Section (Between Header and Image) -->
-            <section class="links">
+            <nav class="links">
                 <a
                     href="./Modelo%20Amajazz.pdf"
                     target="_blank"
@@ -117,11 +134,11 @@
                     >Estatutos</a
                 >
                 <a href="mailto:amajazz@gmail.com" class="contrast">Contact</a>
-            </section>
+            </nav>
 
             <!-- Center Image Section -->
             <section class="center-image">
-                <img src="./Presentacion%20Amajazz.jpg" alt="Presentación Amajazz" />
+                <img src="./Presentacion%20Amajazz.jpg" alt="Presentación Amajazz - a showcase of jazz enthusiasm" />
             </section>
         </main>
     </body>
