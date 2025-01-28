@@ -4,17 +4,19 @@
         <title>Amajazz</title>
         <meta
             name="description"
-            content="Asociación Malagueña de Amantes del Jazz - Join us and follow our updates on Instagram and Facebook."
+            content="Asociación Malagueña de Amantes del Jazz - Únete a nosotras y sigue en Instagram y Facebook."
         />
         <link
             rel="stylesheet"
             href="https://cdn.jsdelivr.net/npm/@picocss/pico@2/css/pico.css"
         />
+        <link rel="icon" href="./favicon.ico" />
         <style>
             body {
-                background-color: #FFC0CB; /* Reverted to the original pink background */
+                background-color: #ffb6c1; /* Adjusted pink for better contrast */
                 color: #fff; /* White text */
                 margin-right: 15%; /* Reduced right margin */
+                margin-left: 15%; /* Added matching left margin */
             }
 
             .header {
@@ -60,17 +62,20 @@
             .links > a {
                 text-decoration: none;
                 color: #fff;
+                transition: all 0.3s ease;
+            }
+
+            .links > a:hover {
+                color: #000;
+                background-color: rgba(255, 255, 255, 0.3);
+                padding: 0.2rem 0.5rem;
+                border-radius: 0.5rem;
             }
 
             /* Media Query for Mobile Devices */
             @media (max-width: 768px) {
-                body {
-                    margin-left: 15%; /* Reduced left margin */
-                    margin-right: 15%; /* Reduced right margin */
-                }
-
                 .center-image > img {
-                    max-width: 80%; /* Make the image smaller on mobile */
+                    max-width: 120%; /* Increase image size by 50% */
                 }
 
                 .links {
@@ -83,7 +88,7 @@
         <main class="container">
             <!-- Header Section -->
             <header class="header">
-                <img src="./amajazz.png" alt="Amajazz logo" />
+                <img src="./amajazz.png" alt="Amajazz logo - a round jazz-themed logo" />
                 <hgroup>
                     <h1>Amajazz</h1>
                     <p>Asociación Malagueña de Amantes del Jazz</p>
@@ -91,7 +96,7 @@
             </header>
 
             <!-- Links Section (Between Header and Image) -->
-            <section class="links">
+            <nav class="links">
                 <a
                     href="./Modelo%20Amajazz.pdf"
                     target="_blank"
@@ -117,11 +122,11 @@
                     >Estatutos</a
                 >
                 <a href="mailto:amajazz@gmail.com" class="contrast">Contact</a>
-            </section>
+            </nav>
 
             <!-- Center Image Section -->
             <section class="center-image">
-                <img src="./Presentacion%20Amajazz.jpg" alt="Presentación Amajazz" />
+                <img src="./Presentacion%20Amajazz.jpg" alt="Presentación Amajazz - a showcase of jazz enthusiasm" />
             </section>
         </main>
     </body>
