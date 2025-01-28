@@ -11,11 +11,15 @@
             href="https://cdn.jsdelivr.net/npm/@picocss/pico@2/css/pico.css"
         />
         <style>
+            body {
+                background-color: #FFC0CB; /* Replace with the exact pink from the logo */
+                color: #000; /* Ensure text is readable */
+            }
             .header {
                 display: flex;
                 gap: 1rem;
                 align-items: center;
-                padding-bottom: 1rem; /* Further reduced padding below header */
+                padding-bottom: 1rem;
             }
             .header > img {
                 width: 150px;
@@ -30,22 +34,23 @@
                 display: flex;
                 justify-content: center;
                 align-items: center;
-                margin: 0.5rem 0; /* Minimal space above and below the image */
+                margin: 0.5rem 0;
             }
             .center-image > img {
-                max-width: 48%; /* Image remains slightly larger */
+                max-width: 48%;
                 height: auto;
                 border-radius: 1rem;
             }
             .links {
                 display: flex;
                 justify-content: center;
-                gap: 1.5rem; /* Spaced-out links */
+                gap: 1.5rem;
                 margin-top: 1rem;
                 flex-wrap: wrap;
             }
             .links > a {
-                text-decoration: none; /* Links are no longer underlined */
+                text-decoration: none;
+                color: #000; /* Links are black for contrast */
             }
         </style>
     </head>
