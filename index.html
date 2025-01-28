@@ -15,6 +15,7 @@
                 display: flex;
                 gap: 1rem;
                 align-items: center;
+                padding-bottom: 2rem; /* Adds space below the logo section */
             }
             .header > img {
                 width: 150px;
@@ -23,12 +24,24 @@
                 object-fit: cover;
             }
             .header > hgroup {
-                margin: 0px;
+                margin: 0;
+            }
+            .center-image {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                margin: 2rem 0; /* Adds vertical spacing */
+            }
+            .center-image > img {
+                max-width: 100%;
+                height: auto;
+                border-radius: 1rem; /* Adds rounded corners */
             }
         </style>
     </head>
     <body>
         <main class="container">
+            <!-- Header Section -->
             <header class="header">
                 <img src="./amajazz.png" alt="Amajazz logo" />
                 <hgroup>
@@ -37,6 +50,12 @@
                 </hgroup>
             </header>
 
+            <!-- Center Image Section -->
+            <section class="center-image">
+                <img src="./Presentacion%20Amajazz.jpg" alt="Presentación Amajazz" />
+            </section>
+
+            <!-- Links Section -->
             <section>
                 <a
                     href="https://www.dropbox.com/scl/fi/fnyy1e3to87ijcdjq6kxv/Modelo-afiliaci-n-Amajazz-1.pdf?rlkey=05d6kp0wh09w0my5ifkicp2be&dl=0"
