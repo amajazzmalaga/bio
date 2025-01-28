@@ -15,7 +15,7 @@
                 display: flex;
                 gap: 1rem;
                 align-items: center;
-                padding-bottom: 2rem; /* Adds space below the logo section */
+                padding-bottom: 2rem;
             }
             .header > img {
                 width: 150px;
@@ -30,12 +30,22 @@
                 display: flex;
                 justify-content: center;
                 align-items: center;
-                margin: 2rem 0; /* Adds vertical spacing */
+                margin: 1.5rem 0; /* Closer to the title */
             }
             .center-image > img {
-                max-width: 40%; /* Reduces the image size by 60% */
+                max-width: 48%; /* Slightly larger */
                 height: auto;
-                border-radius: 1rem; /* Adds rounded corners */
+                border-radius: 1rem;
+            }
+            .links {
+                display: flex;
+                justify-content: center;
+                gap: 1rem;
+                margin-top: 1rem;
+                flex-wrap: wrap; /* Ensure wrapping on smaller screens */
+            }
+            .links > a {
+                text-decoration: none;
             }
         </style>
     </head>
@@ -56,44 +66,31 @@
             </section>
 
             <!-- Links Section -->
-            <section>
+            <section class="links">
                 <a
                     href="https://www.dropbox.com/scl/fi/fnyy1e3to87ijcdjq6kxv/Modelo-afiliaci-n-Amajazz-1.pdf?rlkey=05d6kp0wh09w0my5ifkicp2be&dl=0"
                     target="_blank"
                     class="contrast"
                     >Hazte Socio</a
                 >
-            </section>
-
-            <section>
                 <a
                     href="https://www.instagram.com/amajazzmalaga/"
                     target="_blank"
                     class="contrast"
                     >Instagram</a
                 >
-            </section>
-
-            <section>
                 <a
                     href="https://www.facebook.com/amajazzmalaga"
                     target="_blank"
                     class="contrast"
                     >Facebook</a
                 >
-            </section>
-
-            <section>
                 <a
                     href="./ESTATUTOS%20AMAJAZZ.pdf"
                     target="_blank"
                     class="contrast"
                     >Estatutos</a
                 >
-            </section>
-
-            <!-- Contact Section -->
-            <section>
                 <a href="mailto:amajazz@gmail.com" class="contrast">Contact</a>
             </section>
         </main>
