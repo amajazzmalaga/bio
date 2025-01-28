@@ -12,35 +12,42 @@
         />
         <style>
             body {
-                background-color: #bb345e; /* Updated to the pink color from the logo */
-                color: #fff; /* White text for better contrast against the pink background */
+                background-color: #bb345e; /* Pink background */
+                color: #fff; /* White text */
+                margin-right: 15%; /* Reduced right margin */
             }
+
             .header {
                 display: flex;
                 gap: 1rem;
                 align-items: center;
                 padding-bottom: 1rem;
             }
+
             .header > img {
                 width: 150px;
                 height: 150px;
                 border-radius: 1000px;
                 object-fit: cover;
             }
+
             .header > hgroup {
                 margin: 0;
             }
+
             .center-image {
                 display: flex;
                 justify-content: center;
                 align-items: center;
                 margin: 0.5rem 0;
             }
+
             .center-image > img {
                 max-width: 48%;
                 height: auto;
                 border-radius: 1rem;
             }
+
             .links {
                 display: flex;
                 justify-content: center;
@@ -48,9 +55,26 @@
                 margin-top: 1rem;
                 flex-wrap: wrap;
             }
+
             .links > a {
                 text-decoration: none;
-                color: #fff; /* Links in white for contrast */
+                color: #fff;
+            }
+
+            /* Media Query for Mobile Devices */
+            @media (max-width: 768px) {
+                body {
+                    margin-left: 15%; /* Reduced left margin */
+                    margin-right: 15%; /* Reduced right margin */
+                }
+
+                .center-image > img {
+                    max-width: 80%; /* Make the image smaller on mobile */
+                }
+
+                .links {
+                    margin-bottom: 60%; /* Reduced bottom margin on mobile */
+                }
             }
         </style>
     </head>
