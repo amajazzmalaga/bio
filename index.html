@@ -27,7 +27,7 @@
                 display: flex;
                 gap: 1rem;
                 align-items: center;
-                padding-bottom: 0.2rem; /* Further reduced space below header */
+                padding: 0.5rem 1rem 0.2rem 1rem; /* Add left and right padding for breathing space */
             }
 
             .header > img {
@@ -78,6 +78,10 @@
 
             /* Media Query for Mobile Devices */
             @media (max-width: 768px) {
+                .header {
+                    padding: 0.5rem 1rem; /* Add left and right padding on mobile */
+                }
+
                 .center-image > img {
                     max-width: 120%; /* Increase image size by 50% */
                 }
@@ -91,7 +95,7 @@
                 }
 
                 main {
-                    margin-bottom: 0; /* Stop extra pink background below content */
+                    margin-bottom: 1rem; /* Reduce extra pink space below the content */
                 }
             }
         </style>
