@@ -1,163 +1,228 @@
-<html lang="en">
-    <head>
-        <meta charset="UTF-8" />
-        <title>Amajazz</title>
-        <meta
-            name="description"
-            content="Asociación Malagueña de Amantes del Jazz - Join us and follow our updates on Instagram and Facebook."
-        />
-        <link
-            rel="stylesheet"
-            href="https://cdn.jsdelivr.net/npm/@picocss/pico@2/css/pico.css"
-        />
-        <link rel="icon" href="./favicon.ico" />
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Amajazz</title>
+    <meta
+      name="description"
+      content="Asociación Malagueña de Amantes del Jazz - Join us and follow our updates on Instagram and Facebook."
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/@picocss/pico@2/css/pico.css"
+    />
+    <link rel="icon" href="./favicon.ico" />
     <style>
-    html, body {
+      html {
+        scroll-behavior: smooth;
+      }
+
+      html,
+      body {
         margin: 0;
         padding: 0;
-        background-color: #ffb6c1; /* Pink background */
-        color: #fff; /* White text */
-    }
+        background-color: #ffb6c1;
+        color: #fff;
+      }
 
-    .container {
-        max-width: 100%; /* Ensure full width for content */
-    }
+      .container {
+        max-width: 100%;
+      }
 
-    .header {
+      .header {
         display: flex;
         gap: 1rem;
         align-items: center;
-        padding: 0.5rem 1rem 0.2rem 1rem; /* Add left and right padding for breathing space */
-    }
+        padding: 0.5rem 1rem 0.2rem 1rem;
+      }
 
-    .header > img {
+      .header > img {
         width: 150px;
         height: 150px;
         border-radius: 1000px;
         object-fit: cover;
-    }
+      }
 
-    .header > hgroup {
+      .header > hgroup {
         margin: 0;
-    }
+      }
 
-    .center-image {
+      .center-image {
         display: flex;
         justify-content: center;
         align-items: center;
-        margin: 0.2rem 0; /* Reduce space above and below image */
-    }
+        margin: 0.2rem 0;
+      }
 
-    .center-image > img {
+      .center-image > img {
         max-width: 48%;
         height: auto;
         border-radius: 1rem;
-    }
+      }
 
-    .links {
+      .links {
         display: flex;
         justify-content: center;
         gap: 1.5rem;
-        margin-top: 0.2rem; /* Move links closer to subtitle text */
+        margin-top: 0.2rem;
         flex-wrap: wrap;
-        margin-bottom: 0.5rem; /* Reduce space below links */
-    }
+        margin-bottom: 0.5rem;
+      }
 
-    .links > a {
+      .links > a {
         text-decoration: none;
         color: #fff;
         transition: all 0.3s ease;
-    }
+      }
 
-    .links > a:hover {
+      .links > a:hover {
         color: #000;
         background-color: rgba(255, 255, 255, 0.3);
         padding: 0.2rem 0.5rem;
         border-radius: 0.5rem;
-    }
+      }
 
-    /* Media Query for Mobile Devices */
-    @media (max-width: 768px) {
-        .header {
-            padding: 0.5rem 1rem; /* Add left and right padding on mobile */
-        }
+      .language-switch {
+        display: flex;
+        justify-content: center;
+        gap: 1rem;
+        margin: 0.5rem;
+      }
 
+      .language-switch button {
+        background: transparent;
+        color: #fff;
+        border: 1px solid #fff;
+        padding: 0.2rem 0.5rem;
+        border-radius: 0.5rem;
+        cursor: pointer;
+        transition: all 0.3s ease;
+      }
+
+      .language-switch button:hover {
+        background-color: #fff;
+        color: #000;
+      }
+
+      @media (max-width: 768px) {
         .center-image > img {
-            max-width: 120%; /* Increase image size by 20% */
-            height: auto;
+          max-width: 120%;
         }
 
         .links {
-            margin-bottom: 1rem; /* Limit bottom margin on mobile */
+          margin-bottom: 1rem;
         }
 
         body {
-            min-height: 100vh; /* Ensure content extends fully on mobile */
+          min-height: 100vh;
         }
 
         main {
-            margin-bottom: 0; /* Remove extra pink space below the content */
+          margin-bottom: 0;
         }
-    }
-</style>
+      }
+    </style>
+  </head>
+  <body>
+    <main class="container">
+      <!-- Header -->
+      <header class="header">
+        <img
+          src="./amajazz.png"
+          alt="Amajazz logo - a round jazz-themed logo"
+        />
+        <hgroup>
+          <h1>Amajazz</h1>
+          <p lang="es">Asociación Malagueña de Amantes del Jazz</p>
+          <p lang="en" style="display: none">
+            Malaga Association of Jazz Lovers
+          </p>
+        </hgroup>
+      </header>
 
-    </head>
-    <body>
-        <main class="container">
-            <!-- Header Section -->
-            <header class="header">
-                <img src="./amajazz.png" alt="Amajazz logo - a round jazz-themed logo" />
-                <hgroup>
-                    <h1>Amajazz</h1>
-                    <p>Asociación Malagueña de Amantes del Jazz</p>
-                </hgroup>
-            </header>
+      <!-- Language Toggle -->
+      <div class="language-switch">
+        <button onclick="setLanguage('es')">ES</button>
+        <button onclick="setLanguage('en')">EN</button>
+      </div>
 
-            <!-- Links Section (Between Header and Image) -->
-            <nav class="links">
-                <a
-                    href="./Modelo%20Amajazz.pdf"
-                    target="_blank"
-                    class="contrast"
-                    >Hazte Socio</a
-                >
-                <a
-                    href="https://www.instagram.com/amajazzmalaga/"
-                    target="_blank"
-                    class="contrast"
-                    >Instagram</a
-                >
-                <a
-                    href="https://www.facebook.com/amajazzmalaga"
-                    target="_blank"
-                    class="contrast"
-                    >Facebook</a
-                >
-                <a
-                    href="./ESTATUTOS%20AMAJAZZ.pdf"
-                    target="_blank"
-                    class="contrast"
-                    >Estatutos</a
-                >
-    
-                <a href="mailto:amajazzmalaga@gmail.com" class="contrast">Contacto</a>
+      <!-- Navigation -->
+      <nav class="links">
+        <a href="./Modelo%20Amajazz.pdf" target="_blank" class="contrast" lang="es"
+          >Hazte Socio</a
+        >
+        <a
+          href="./Modelo%20Amajazz.pdf"
+          target="_blank"
+          class="contrast"
+          lang="en"
+          style="display: none"
+          >Join Us</a
+        >
 
-                <a href="./Abril%20Newsletter.pdf" target="_blank" class="contrast">Abril Newsletter</a>
+        <a
+          href="https://www.instagram.com/amajazzmalaga/"
+          target="_blank"
+          class="contrast"
+          >Instagram</a
+        >
+        <a
+          href="https://www.facebook.com/amajazzmalaga"
+          target="_blank"
+          class="contrast"
+          >Facebook</a
+        >
 
-                
-            </nav>
+        <a
+          href="./ESTATUTOS%20AMAJAZZ.pdf"
+          target="_blank"
+          class="contrast"
+          lang="es"
+          >Estatutos</a
+        >
+        <a
+          href="./ESTATUTOS%20AMAJAZZ.pdf"
+          target="_blank"
+          class="contrast"
+          lang="en"
+          style="display: none"
+          >Bylaws</a
+        >
 
-            <!-- Center Image Section -->
-<section class="center-image">
-    <img src="./Womeninjazz4abril.jpeg" alt="Women's Day Celebration - Asociación Malagueña de Amantes del Jazz" />
-</section>
+        <a href="mailto:amajazzmalaga@gmail.com" class="contrast">Contacto</a>
+        <a href="./Abril%20Update.pdf" target="_blank" class="contrast">Abril Newsletter</a>
+        <a href="#que-es-amajazz" class="contrast">¿Qué es Amajazz?</a>
+      </nav>
 
-<!-- Additional Image for Abril Polijazz -->
-<section class="center-image">
-    <img src="./Abril%20Polijazz.png" alt="Abril Polijazz Concert Poster" />
-</section>
+      <!-- Abril Image -->
+      <section class="center-image">
+        <img src="./Abril%20Polijazz.png" alt="Abril Polijazz Concert Poster" />
+      </section>
 
-            </section>
-        </main>
-    </body>
+      <!-- "¿Qué es Amajazz?" Section -->
+      <section id="que-es-amajazz" class="container" style="padding: 1rem;">
+        <h2 style="color: #fff;" lang="es">¿Qué es Amajazz?</h2>
+        <h2 style="color: #fff; display: none;" lang="en">What is Amajazz?</h2>
+
+        <p style="color: #fff;" lang="es">
+          <!-- Agrega aquí tu texto en español -->
+          Amajazz es una asociación cultural sin ánimo de lucro dedicada al jazz...
+        </p>
+
+        <p style="color: #fff; display: none;" lang="en">
+          <!-- Add your English text here -->
+          Amajazz is a nonprofit cultural association dedicated to jazz...
+        </p>
+      </section>
+    </main>
+
+    <!-- Language Toggle Script -->
+    <script>
+      function setLanguage(lang) {
+        document.querySelectorAll("[lang]").forEach((el) => {
+          el.style.display = el.getAttribute("lang") === lang ? "" : "none";
+        });
+      }
+    </script>
+  </body>
 </html>
