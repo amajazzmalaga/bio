@@ -82,28 +82,6 @@
         border-radius: 0.5rem;
       }
 
-      .language-switch {
-        display: flex;
-        justify-content: center;
-        gap: 1rem;
-        margin: 0.5rem;
-      }
-
-      .language-switch button {
-        background: transparent;
-        color: #fff;
-        border: 1px solid #fff;
-        padding: 0.2rem 0.5rem;
-        border-radius: 0.5rem;
-        cursor: pointer;
-        transition: all 0.3s ease;
-      }
-
-      .language-switch button:hover {
-        background-color: #fff;
-        color: #000;
-      }
-
       @media (max-width: 768px) {
         .center-image > img {
           max-width: 120%;
@@ -133,31 +111,14 @@
         />
         <hgroup>
           <h1>Amajazz</h1>
-          <p lang="es">Asociación Malagueña de Amantes del Jazz</p>
-          <p lang="en" style="display: none">
-            Malaga Association of Jazz Lovers
-          </p>
+          <p>Asociación Malagueña de Amantes del Jazz</p>
         </hgroup>
       </header>
 
-      <!-- Language Toggle -->
-      <div class="language-switch">
-        <button onclick="setLanguage('es')">ES</button>
-        <button onclick="setLanguage('en')">EN</button>
-      </div>
-
       <!-- Navigation -->
       <nav class="links">
-        <a href="./Modelo%20Amajazz.pdf" target="_blank" class="contrast" lang="es"
+        <a href="./Modelo%20Amajazz.pdf" target="_blank" class="contrast"
           >Hazte Socio</a
-        >
-        <a
-          href="./Modelo%20Amajazz.pdf"
-          target="_blank"
-          class="contrast"
-          lang="en"
-          style="display: none"
-          >Join Us</a
         >
 
         <a
@@ -177,16 +138,7 @@
           href="./ESTATUTOS%20AMAJAZZ.pdf"
           target="_blank"
           class="contrast"
-          lang="es"
           >Estatutos</a
-        >
-        <a
-          href="./ESTATUTOS%20AMAJAZZ.pdf"
-          target="_blank"
-          class="contrast"
-          lang="en"
-          style="display: none"
-          >Bylaws</a
         >
 
         <a href="mailto:amajazzmalaga@gmail.com" class="contrast">Contacto</a>
@@ -199,17 +151,11 @@
         <img src="./Abril%20Polijazz.png" alt="Abril Polijazz Concert Poster" />
       </section>
 
-    
+      <!-- ¿Qué es Amajazz? Section Placeholder -->
+      <section id="que-es-amajazz" style="padding: 2rem; text-align: center">
+        <h2>¿Qué es Amajazz?</h2>
+        <p>Aquí irá el texto descriptivo sobre la asociación.</p>
       </section>
     </main>
-
-    <!-- Language Toggle Script -->
-    <script>
-      function setLanguage(lang) {
-        document.querySelectorAll("[lang]").forEach((el) => {
-          el.style.display = el.getAttribute("lang") === lang ? "" : "none";
-        });
-      }
-    </script>
   </body>
 </html>
