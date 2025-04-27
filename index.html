@@ -47,14 +47,15 @@
         margin: 0;
       }
 
-      .center-image {
+      .center-images {
         display: flex;
         justify-content: center;
         align-items: center;
+        gap: 1rem;
         margin: 0.2rem 0;
       }
 
-      .center-image > img {
+      .center-images > img {
         max-width: 48%;
         height: auto;
         border-radius: 1rem;
@@ -83,7 +84,7 @@
       }
 
       @media (max-width: 768px) {
-        .center-image > img {
+        .center-images > img {
           max-width: 120%;
         }
 
@@ -146,10 +147,10 @@
         <a href="#que-es-amajazz" class="contrast">¿Qué es Amajazz?</a>
       </nav>
 
-      <!-- Abril Image -->
-      <section class="center-image">
+      <!-- Abril and Second Flyer Images -->
+      <section class="center-images">
         <img src="./composers.jpeg" alt="Composers' Collective - The Hall" />
-      </section>
+        <img src="./mayo.png" alt="Polijazz Mayo" />
       </section>
     </main>
   </body>
