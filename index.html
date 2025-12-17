@@ -12,6 +12,7 @@
       href="https://cdn.jsdelivr.net/npm/@picocss/pico@2/css/pico.css"
     />
     <link rel="icon" href="./favicon.ico" />
+
     <style>
       html {
         scroll-behavior: smooth;
@@ -29,6 +30,7 @@
         max-width: 100%;
       }
 
+      /* Header */
       .header {
         display: flex;
         gap: 1rem;
@@ -47,27 +49,14 @@
         margin: 0;
       }
 
-      .center-images {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        gap: 1rem;
-        margin: 0.2rem 0;
-      }
-
-      .center-images > img {
-        max-width: 48%;
-        height: auto;
-        border-radius: 1rem;
-      }
-
+      /* Navigation */
       .links {
         display: flex;
         justify-content: center;
         gap: 1.5rem;
         margin-top: 0.2rem;
         flex-wrap: wrap;
-        margin-bottom: 0.5rem;
+        margin-bottom: 0.8rem;
       }
 
       .links > a {
@@ -83,33 +72,57 @@
         border-radius: 0.5rem;
       }
 
+      /* Center images */
+      .center-images {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 0.5rem 0;
+      }
+
+      .center-images img {
+        max-width: 48%;
+        height: auto;
+        border-radius: 1rem;
+      }
+
+      /* Que es Amajazz section */
+      .amajazz-section {
+        text-align: center;
+        margin: 1.5rem 0 2rem 0;
+        padding: 0 1rem;
+      }
+
+      .amajazz-section h2 {
+        margin-bottom: 1rem;
+      }
+
+      .amajazz-section img {
+        max-width: 60%;
+        height: auto;
+        border-radius: 1rem;
+      }
+
+      /* Mobile */
       @media (max-width: 768px) {
-        .center-images > img {
-          max-width: 120%;
+        .center-images img {
+          width: 95vw;
+          max-width: none;
         }
 
-        .links {
-          margin-bottom: 1rem;
-        }
-
-        body {
-          min-height: 100vh;
-        }
-
-        main {
-          margin-bottom: 0;
+        .amajazz-section img {
+          width: 95vw;
+          max-width: none;
         }
       }
     </style>
   </head>
+
   <body>
     <main class="container">
       <!-- Header -->
       <header class="header">
-        <img
-          src="./amajazz.png"
-          alt="Amajazz logo - a round jazz-themed logo"
-        />
+        <img src="./amajazz.png" alt="Amajazz logo" />
         <hgroup>
           <h1>Amajazz</h1>
           <p>Asociación Malagueña de Amantes del Jazz</p>
@@ -118,11 +131,9 @@
 
       <!-- Navigation -->
       <nav class="links">
-
-        <!-- UPDATED LINK -->
-        <a 
-          href="https://docs.google.com/forms/d/e/1FAIpQLSdy8-25zTacTVkMLrXvjIqkaYzY5gscPxAJAUPGChhaAf1O4A/viewform?usp=dialog" 
-          target="_blank" 
+        <a
+          href="https://docs.google.com/forms/d/e/1FAIpQLSdy8-25zTacTVkMLrXvjIqkaYzY5gscPxAJAUPGChhaAf1O4A/viewform?usp=dialog"
+          target="_blank"
           class="contrast"
         >
           Hazte Socio
@@ -147,12 +158,19 @@
         >Estatutos</a>
 
         <a href="mailto:amajazzmalaga@gmail.com" class="contrast">Contacto</a>
+
         <a href="#que-es-amajazz" class="contrast">¿Qué es Amajazz?</a>
       </nav>
 
-      <!-- Abril and Second Flyer Images -->
+      <!-- Diciembre Flyer -->
       <section class="center-images">
         <img src="./diciembre POLIJAZZ.png" alt="Diciembre Polijazz" />
+      </section>
+
+      <!-- Que es Amajazz -->
+      <section id="que-es-amajazz" class="amajazz-section">
+        <h2>¿Qué es Amajazz?</h2>
+        <img src="./flyer.png" alt="Flyer Amajazz" />
       </section>
     </main>
   </body>
