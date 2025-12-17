@@ -56,7 +56,7 @@
         gap: 1.5rem;
         margin-top: 0.2rem;
         flex-wrap: wrap;
-        margin-bottom: 0.8rem;
+        margin-bottom: 1rem;
       }
 
       .links > a {
@@ -72,45 +72,31 @@
         border-radius: 0.5rem;
       }
 
-      /* Center images */
-      .center-images {
+      /* Flyers general */
+      .flyer-row {
         display: flex;
         justify-content: center;
         align-items: center;
-        margin: 0.5rem 0;
+        gap: 1rem;
+        margin: 0.5rem 0 1.5rem 0;
+        flex-wrap: wrap;
       }
 
-      .center-images img {
-        max-width: 48%;
+      .flyer-row img {
+        max-width: 45%;
         height: auto;
         border-radius: 1rem;
       }
 
-      /* Que es Amajazz section */
-      .amajazz-section {
+      /* Section headings */
+      section h2 {
         text-align: center;
-        margin: 1.5rem 0 2rem 0;
-        padding: 0 1rem;
-      }
-
-      .amajazz-section h2 {
-        margin-bottom: 1rem;
-      }
-
-      .amajazz-section img {
-        max-width: 60%;
-        height: auto;
-        border-radius: 1rem;
+        margin: 1.5rem 0 1rem 0;
       }
 
       /* Mobile */
       @media (max-width: 768px) {
-        .center-images img {
-          width: 95vw;
-          max-width: none;
-        }
-
-        .amajazz-section img {
+        .flyer-row img {
           width: 95vw;
           max-width: none;
         }
@@ -135,9 +121,7 @@
           href="https://docs.google.com/forms/d/e/1FAIpQLSdy8-25zTacTVkMLrXvjIqkaYzY5gscPxAJAUPGChhaAf1O4A/viewform?usp=dialog"
           target="_blank"
           class="contrast"
-        >
-          Hazte Socio
-        </a>
+        >Hazte Socio</a>
 
         <a
           href="https://www.instagram.com/amajazzmalaga/"
@@ -158,19 +142,31 @@
         >Estatutos</a>
 
         <a href="mailto:amajazzmalaga@gmail.com" class="contrast">Contacto</a>
-
-        <a href="#que-es-amajazz" class="contrast">¿Qué es Amajazz?</a>
       </nav>
 
-      <!-- Diciembre Flyer -->
-      <section class="center-images">
-        <img src="./diciembre POLIJAZZ.png" alt="Diciembre Polijazz" />
+      <!-- Diciembre -->
+      <section>
+        <h2>Diciembre</h2>
+        <div class="flyer-row">
+          <img src="./diciembre POLIJAZZ.png" alt="Diciembre Polijazz" />
+        </div>
+      </section>
+
+      <!-- Próximos conciertos -->
+      <section>
+        <h2>Próximos conciertos</h2>
+        <div class="flyer-row">
+          <img src="./17.png" alt="Concierto 17" />
+          <img src="./18.png" alt="Concierto 18" />
+        </div>
       </section>
 
       <!-- Que es Amajazz -->
-      <section id="que-es-amajazz" class="amajazz-section">
+      <section id="que-es-amajazz">
         <h2>¿Qué es Amajazz?</h2>
-        <img src="./flyer.png" alt="Flyer Amajazz" />
+        <div class="flyer-row">
+          <img src="./flyer.png" alt="Flyer Amajazz" />
+        </div>
       </section>
     </main>
   </body>
