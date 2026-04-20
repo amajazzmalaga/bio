@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Equipo directivo – Amajazz</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@2/css/pico.css" />
+    <link rel="icon" href="./favicon.ico" />
+    <style>
+      html { scroll-behavior: smooth; }
+      html, body { margin: 0; padding: 0; background-color: #ffb6c1; color: #fff; }
+      .container { max-width: 100%; }
+
+      .header {
+        display: flex;
+        gap: 1rem;
+        align-items: center;
+        padding: 0.5rem 1rem 0.2rem 1rem;
+      }
+      .header > img {
+        width: 150px;
+        height: 150px;
+        border-radius: 1000px;
+        object-fit: cover;
+      }
+      .header > hgroup { margin: 0; }
+
+      .links {
+        display: flex;
+        justify-content: center;
+        gap: 1.5rem;
+        margin-top: 0.2rem;
+        flex-wrap: wrap;
+        margin-bottom: 1rem;
+      }
+      .links > a {
+        text-decoration: none;
+        color: #fff;
+        font-size: 15px;
+        font-weight: 500;
+        transition: all 0.3s ease;
+      }
+      .links > a:hover {
+        background-color: rgba(255, 255, 255, 0.3);
+        padding: 0.2rem 0.5rem;
+        border-radius: 0.5rem;
+      }
+
+      .contenido {
+        padding: 40px;
+        max-width: 1100px;
+        margin: 0 auto;
+        font-family: sans-serif;
+      }
+      .contenido h2 {
+        font-size: 32px;
+        font-weight: 600;
+        color: #fff;
+        text-align: center;
+        margin-bottom: 8px;
+      }
+      .contenido p.subtitulo {
+        font-size: 16px;
+        color: #fff;
+        text-align: center;
+        margin-bottom: 40px;
+      }
+
+      .team-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+        gap: 24px;
+      }
+      .member-card {
+        background: rgba(255,255,255,0.2);
+        border-radius: 12px;
+        padding: 24px;
+        text-align: center;
+      }
+      .member-card img {
+        width: 100px;
+        height: 100px;
+        border-radius: 50%;
+        object-fit: cover;
+        margin-bottom: 16px;
+      }
+      .member-card h3 { font-size: 17px; font-weight: 600; color: #fff; margin: 0 0 4px; }
+      .member-card .cargo { font-size: 13px; color: #fff; font-weight: 600; margin: 0 0 10px; }
+      .member-card .desc { font-size: 13px; color: #fff; line-height: 1.5; margin: 0; }
+    </style>
+  </head>
+  <body>
+    <main class="container">
+      <header class="header">
+        <img src="./amajazz.png" alt="Amajazz logo" />
+        <hgroup>
+          <h1>Amajazz</h1>
+          <p>Asociación Malagueña de Amantes del Jazz</p>
+        </hgroup>
+      </header>
+
+      <nav class="links">
+        <a href="index.html">¿Quiénes somos?</a>
+        <a href="index.html#que-es-amajazz">¿Qué es Amajazz?</a>
+        <a href="equipo.html">Equipo directivo</a>
+        <a href="index.html#hazte-socio">Hazte Socio</a>
+        <a href="./ESTATUTOS%20AMAJAZZ.pdf" target="_blank">Estatutos</a>
+        <a href="mailto:amajazzmalaga@gmail.com">Contacto</a>
+      </nav>
+
+      <div class="contenido">
+        <h2>Equipo directivo</h2>
+        <p class="subtitulo">Las personas que lideran nuestro proyecto</p>
+
+        <div class="team-grid">
+
+          <div class="member-card">
+            <img src="https://raw.githubusercontent.com/amajazzmalaga/bio/master/Lara.jpeg" alt="Lara Bello" />
+            <h3>Lara Bello</h3>
+            <p class="cargo">Presidenta</p>
+            <p class="desc">Cantante y compositora, de vuelta en España tras 12 años en Nueva York.</p>
+          </div>
+
+          <div class="member-card">
+            <img src="https://raw.githubusercontent.com/amajazzmalaga/bio/master/Lei%202.jpg" alt="Lei Sandra Melguizo" />
+            <h3>Lei Sandra Melguizo</h3>
+            <p class="cargo">Vicepresidenta</p>
+            <p class="desc">Saxofonista y bajista referente de la escena malagueña.</p>
+          </div>
+
+          <div class="member-card">
+            <img src="https://raw.githubusercontent.com/amajazzmalaga/bio/master/Raj.jpeg" alt="Rajiv Jayaweera" />
+            <h3>Rajiv Jayaweera</h3>
+            <p class="cargo">Tesorero</p>
+            <p class="desc">Baterista y compositor de reconocida trayectoria.</p>
+          </div>
+
+          <div class="member-card">
+            <img src="https://raw.githubusercontent.com/amajazzmalaga/bio/master/Enrique.jpeg" alt="Enrique Oliver" />
+            <h3>Enrique Oliver</h3>
+            <p class="cargo">Secretario</p>
+            <p class="desc">Saxofonista y compositor de jazz destacado en la escena española.</p>
+          </div>
+
+        </div>
+      </div>
+    </main>
+  </body>
+</html>
