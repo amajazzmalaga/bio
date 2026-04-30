@@ -5,87 +5,45 @@
     <title>Equipo directivo – Amajazz</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@2/css/pico.css" />
     <link rel="icon" href="./favicon.ico" />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
     <style>
       html { scroll-behavior: smooth; }
-      html, body { margin: 0; padding: 0; background-color: #ffb6c1; color: #fff; }
+      html, body {
+        margin: 0;
+        padding: 0;
+        background-color: #ffb6c1;
+        color: #000 !important;
+        font-family: 'Inter', sans-serif;
+        text-transform: capitalize;
+      }
+      * { color: #000 !important; font-family: 'Inter', sans-serif; }
       .container { max-width: 100%; }
 
-      .header {
-        display: flex;
-        gap: 1rem;
-        align-items: center;
-        padding: 0.5rem 1rem 0.2rem 1rem;
-      }
-      .header > img {
-        width: 150px;
-        height: 150px;
-        border-radius: 1000px;
-        object-fit: cover;
-      }
+      .header { display: flex; gap: 1rem; align-items: center; padding: 0.5rem 1rem 0.2rem 1rem; }
+      .header > img { width: 150px; height: 150px; border-radius: 1000px; object-fit: cover; }
       .header > hgroup { margin: 0; }
 
-      .links {
-        display: flex;
-        justify-content: center;
-        gap: 1.5rem;
-        margin-top: 0.2rem;
-        flex-wrap: wrap;
-        margin-bottom: 1rem;
-      }
-      .links > a {
-        text-decoration: none;
-        color: #fff;
-        font-size: 15px;
-        font-weight: 500;
-        transition: all 0.3s ease;
-      }
-      .links > a:hover {
-        background-color: rgba(255, 255, 255, 0.3);
-        padding: 0.2rem 0.5rem;
-        border-radius: 0.5rem;
-      }
+      .links { display: flex; justify-content: center; gap: 1.5rem; margin-top: 0.2rem; flex-wrap: wrap; margin-bottom: 1rem; align-items: center; }
+      .links > a { text-decoration: none; color: #000 !important; font-size: 15px; font-weight: 500; transition: all 0.3s ease; }
+      .links > a:hover { font-weight: 700; background-color: rgba(255,255,255,0.3); padding: 0.2rem 0.5rem; border-radius: 0.5rem; }
 
-      .contenido {
-        padding: 40px;
-        max-width: 1100px;
-        margin: 0 auto;
-        font-family: sans-serif;
-      }
-      .contenido h2 {
-        font-size: 32px;
-        font-weight: 600;
-        color: #fff;
-        text-align: center;
-        margin-bottom: 8px;
-      }
-      .contenido p.subtitulo {
-        font-size: 16px;
-        color: #fff;
-        text-align: center;
-        margin-bottom: 40px;
-      }
+      .dropdown { position: relative; }
+      .dropdown > span { color: #000 !important; font-size: 15px; font-weight: 500; cursor: pointer; }
+      .dropdown-menu { display: none; position: absolute; top: 110%; left: 0; background: #fff; border-radius: 8px; min-width: 200px; box-shadow: 0 4px 12px rgba(0,0,0,0.15); z-index: 100; overflow: hidden; }
+      .dropdown-menu a { display: block; padding: 12px 16px; color: #000 !important; font-size: 14px; text-decoration: none; border-bottom: 1px solid #f0f0f0; }
+      .dropdown-menu a:hover { background: #f9f0f0; color: #c0626b !important; font-weight: 600; }
+      .dropdown:hover .dropdown-menu { display: block; }
 
-      .team-grid {
-        display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-        gap: 24px;
-      }
-      .member-card {
-        background: rgba(255,255,255,0.2);
-        border-radius: 12px;
-        padding: 24px;
-        text-align: center;
-      }
-      .member-card img {
-        width: 100px;
-        height: 100px;
-        border-radius: 50%;
-        object-fit: cover;
-        margin-bottom: 16px;
-      }
-      .member-card h3 { font-size: 17px; font-weight: 600; color: #fff; margin: 0 0 4px; }
-      .member-card .cargo { font-size: 13px; color: #fff; font-weight: 600; margin: 0 0 10px; }
-      .member-card .desc { font-size: 13px; color: #fff; line-height: 1.5; margin: 0; }
+      .contenido { padding: 40px; max-width: 1100px; margin: 0 auto; }
+      .contenido h2 { font-size: 32px; font-weight: 600; text-align: center; margin-bottom: 8px; }
+      .contenido p.subtitulo { font-size: 16px; text-align: center; margin-bottom: 40px; }
+
+      .team-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 24px; }
+      .member-card { background: rgba(255,255,255,0.4); border-radius: 12px; padding: 24px; text-align: center; }
+      .member-card img { width: 100px; height: 100px; border-radius: 50%; object-fit: cover; margin-bottom: 16px; }
+      .member-card h3 { font-size: 17px; font-weight: 600; margin: 0 0 4px; }
+      .member-card .cargo { font-size: 13px; font-weight: 600; margin: 0 0 10px; }
+      .member-card .desc { font-size: 13px; line-height: 1.5; margin: 0; }
     </style>
   </head>
   <body>
@@ -94,22 +52,28 @@
         <img src="./amajazz.png" alt="Amajazz logo" />
         <hgroup>
           <h1>Amajazz</h1>
-          <p>Asociación Malagueña de Amantes del Jazz</p>
+          <p>Asociación Malagueña De Amantes Del Jazz</p>
         </hgroup>
       </header>
 
       <nav class="links">
-        <a href="index.html">¿Quiénes somos?</a>
-        <a href="index.html#que-es-amajazz">¿Qué es Amajazz?</a>
-        <a href="equipo.html">Equipo directivo</a>
+        <div class="dropdown">
+          <span>¿Quiénes Somos? ▾</span>
+          <div class="dropdown-menu">
+            <a href="conocenos.html">Conócenos</a>
+            <a href="actividades.html">Nuestras Actividades</a>
+          </div>
+        </div>
+        <a href="index.html#que-es-amajazz">¿Qué Es Amajazz?</a>
+        <a href="equipo.html">Equipo Directivo</a>
         <a href="index.html#hazte-socio">Hazte Socio</a>
         <a href="./ESTATUTOS%20AMAJAZZ.pdf" target="_blank">Estatutos</a>
         <a href="mailto:amajazzmalaga@gmail.com">Contacto</a>
       </nav>
 
       <div class="contenido">
-        <h2>Equipo directivo</h2>
-        <p class="subtitulo">Las personas que lideran nuestro proyecto</p>
+        <h2>Equipo Directivo</h2>
+        <p class="subtitulo">Las Personas Que Lideran Nuestro Proyecto</p>
 
         <div class="team-grid">
 
