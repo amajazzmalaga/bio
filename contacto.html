@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Contacto – Amajazz</title>
+    <meta name="description" content="Contacta con la Asociación Malagueña de Amantes del Jazz" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@2/css/pico.css" />
+    <link rel="icon" href="./favicon.ico" />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+    <style>
+      html { scroll-behavior: smooth; }
+      html, body { margin: 0; padding: 0; background-color: #ffb6c1; font-family: 'Inter', sans-serif; }
+      * { color: #000 !important; font-family: 'Inter', sans-serif; }
+      .container { max-width: 100%; }
+
+      /* HEADER */
+      .header { display: flex; gap: 1rem; align-items: center; padding: 0.5rem 1rem 0.2rem 1rem; }
+      .header > img { width: 160px; height: 160px; border-radius: 1000px; object-fit: cover; }
+      .header > hgroup { margin: 0; }
+      .header h1 { font-size: 22px; margin: 0; }
+      .header p { font-size: 13px; margin: 0; }
+
+      /* NAV */
+      .links { display: flex; justify-content: center; gap: 1.5rem; margin-top: 0.2rem; flex-wrap: wrap; margin-bottom: 1rem; align-items: center; }
+      .links > a { text-decoration: none; font-size: 15px; font-weight: 500; transition: all 0.3s ease; }
+      .links > a:hover { font-weight: 700; background-color: rgba(255,255,255,0.3); padding: 0.2rem 0.5rem; border-radius: 0.5rem; }
+
+      .dropdown { position: relative; display: inline-block; }
+      .dropdown > span { font-size: 15px; font-weight: 500; cursor: pointer; }
+      .dropdown-menu { display: none; position: absolute; top: 110%; left: 0; background: #fff; border-radius: 8px; min-width: 200px; box-shadow: 0 4px 12px rgba(0,0,0,0.15); z-index: 100; overflow: hidden; }
+      .dropdown-menu a { display: block; padding: 12px 16px; font-size: 14px; text-decoration: none; border-bottom: 1px solid #f0f0f0; }
+      .dropdown-menu a:hover { background: #f9f0f0; font-weight: 600; }
+      .dropdown:hover .dropdown-menu { display: block; }
+
+      /* HERO CONTACTO */
+      .hero-contacto {
+        position: relative;
+        width: 100%;
+        height: 260px;
+        overflow: hidden;
+        display: flex;
+        align-items: flex-end;
+        padding: 0 0 32px 40px;
+        box-sizing: border-box;
+      }
+      .hero-contacto::before {
+        content: '';
+        position: absolute;
+        inset: 0;
+        background: linear-gradient(135deg, #c0626b 0%, #8b2a35 50%, #2a0a0d 100%);
+        z-index: 0;
+      }
+      /* Decorative music notes pattern */
+      .hero-contacto::after {
+        content: '♪ ♫ ♩ ♬ ♪ ♫ ♩ ♬ ♪ ♫ ♩ ♬ ♪ ♫ ♩ ♬ ♪ ♫ ♩ ♬ ♪ ♫ ♩ ♬';
+        position: absolute;
+        inset: 0;
+        font-size: 28px;
+        color: rgba(255,255,255,0.06) !important;
+        display: flex;
+        align-items: center;
+        word-break: break-all;
+        padding: 16px;
+        z-index: 1;
+        letter-spacing: 12px;
+        line-height: 1.8;
+      }
+      .hero-titulo {
+        position: relative;
+        z-index: 2;
+        font-size: clamp(52px, 10vw, 96px);
+        font-weight: 700;
+        color: #fff !important;
+        letter-spacing: -2px;
+        line-height: 1;
+        text-transform: uppercase;
+      }
+      .hero-titulo span {
+        color: #ffb6c1 !important;
+      }
+
+      /* CONTENIDO PRINCIPAL */
+      .contacto-body {
+        max-width: 700px;
+        margin: 0 auto;
+        padding: 0 20px 60px 20px;
+      }
+
+      /* COLUMNA IZQUIERDA */
+      .contacto-left {
+        background: #fff;
+        border-radius: 16px;
+        padding: 48px;
+        margin-top: -20px;
+        position: relative;
+        z-index: 2;
+      }
+      .contacto-left p.intro {
+        font-size: 15px;
+        color: #444 !important;
+        margin-bottom: 24px;
+        line-height: 1.7;
+      }
+      .contacto-emails {
+        margin-bottom: 32px;
+      }
+      .contacto-emails p {
+        font-size: 14px;
+        margin: 8px 0;
+        line-height: 1.6;
+      }
+      .contacto-emails strong { font-weight: 700; }
+      .contacto-emails a {
+        color: #c0626b !important;
+        text-decoration: none;
+        font-weight: 500;
+      }
+      .contacto-emails a:hover { text-decoration: underline; }
+
+      .form-label {
+        font-size: 13px;
+        font-weight: 600;
+        margin-bottom: 6px;
+        display: block;
+        color: #333 !important;
+      }
+      .form-input {
+        width: 100%;
+        padding: 12px 16px;
+        border: 1.5px solid #e0e0e0;
+        border-radius: 8px;
+        font-size: 14px;
+        margin-bottom: 16px;
+        box-sizing: border-box;
+        background: #fafafa;
+        transition: border-color 0.2s;
+        font-family: 'Inter', sans-serif;
+        color: #000 !important;
+      }
+      .form-input:focus {
+        outline: none;
+        border-color: #c0626b;
+        background: #fff;
+      }
+      textarea.form-input {
+        min-height: 120px;
+        resize: vertical;
+      }
+      .btn-enviar {
+        background: #c0626b;
+        color: #fff !important;
+        border: none;
+        padding: 14px 40px;
+        border-radius: 30px;
+        font-size: 15px;
+        font-weight: 600;
+        cursor: pointer;
+        transition: background 0.2s, transform 0.1s;
+        font-family: 'Inter', sans-serif;
+      }
+      .btn-enviar:hover {
+        background: #a8454e;
+        transform: translateY(-1px);
+      }
+
+
+
+      /* MENSAJE DE ÉXITO */
+      .success-msg {
+        display: none;
+        background: #e8f5e9;
+        border: 1.5px solid #81c784;
+        border-radius: 8px;
+        padding: 16px;
+        font-size: 14px;
+        color: #2e7d32 !important;
+        margin-top: 16px;
+        text-align: center;
+      }
+
+      @media (max-width: 768px) {
+        .contacto-left { padding: 32px 24px; }
+        .hero-contacto { height: 180px; padding: 0 0 24px 24px; }
+      }
+    </style>
+  </head>
+
+  <body>
+    <main class="container">
+      <header class="header">
+        <img src="./amajazz.png" alt="Amajazz logo" />
+        <hgroup>
+          <h1>Amajazz</h1>
+          <p>Asociación Malagueña de Amantes del Jazz</p>
+        </hgroup>
+      </header>
+
+      <nav class="links">
+        <div class="dropdown">
+          <span>¿Quiénes somos? ▾</span>
+          <div class="dropdown-menu">
+            <a href="conocenos.html">Conócenos</a>
+            <a href="actividades.html">Nuestras actividades</a>
+            <a href="equipo.html">Equipo directivo</a>
+          </div>
+        </div>
+        <a href="index.html#que-es-amajazz">¿Qué es Amajazz?</a>
+        <a href="index.html#hazte-socio">Hazte Socio</a>
+        <a href="./ESTATUTOS%20AMAJAZZ.pdf" target="_blank">Estatutos</a>
+        <a href="contacto.html">Contacto</a>
+      </nav>
+    </main>
+
+    <!-- HERO -->
+    <div class="hero-contacto">
+      <div class="hero-titulo">Con<span>tac</span>to</div>
+    </div>
+
+    <!-- CUERPO -->
+    <div class="contacto-body">
+
+      <!-- IZQUIERDA: emails + formulario -->
+      <div class="contacto-left">
+        <p class="intro">Puedes contactarnos escribiendo un email o rellenando el formulario y te responderemos lo antes posible.</p>
+
+        <div class="contacto-emails">
+          <p><strong>Amajazz General:</strong> <a href="mailto:amajazzmalaga@gmail.com">amajazzmalaga@gmail.com</a></p>
+        </div>
+
+        <p class="intro" style="margin-bottom: 20px;">O rellena este formulario:</p>
+
+        <label class="form-label">Nombre</label>
+        <input type="text" class="form-input" placeholder="Tu nombre" id="nombre" />
+
+        <label class="form-label">Email</label>
+        <input type="email" class="form-input" placeholder="tu@email.com" id="email" />
+
+        <label class="form-label">Mensaje</label>
+        <textarea class="form-input" placeholder="Escribe tu mensaje aquí..." id="mensaje"></textarea>
+
+        <button class="btn-enviar" onclick="enviarFormulario()">Enviar mensaje</button>
+
+        <div class="success-msg" id="success">
+          ✅ ¡Mensaje enviado! Nos pondremos en contacto contigo pronto.
+        </div>
+      </div>
+
+
+
+    </div>
+
+    <!-- FOOTER -->
+    <footer style="background: #111; padding: 40px 20px; text-align: center; margin-top: 20px;">
+      <p style="color: #fff !important; font-size: 16px; font-weight: 600; margin-bottom: 24px;">Síguenos en:</p>
+      <div style="display: flex; justify-content: center; gap: 24px; align-items: center;">
+        <a href="https://www.facebook.com/amajazzmalaga" target="_blank">
+          <img src="https://cdn-icons-png.flaticon.com/512/124/124010.png" alt="Facebook" style="width:60px;height:60px;border-radius:50%;" />
+        </a>
+        <a href="https://www.instagram.com/amajazzmalaga/" target="_blank">
+          <img src="https://cdn-icons-png.flaticon.com/512/2111/2111463.png" alt="Instagram" style="width:60px;height:60px;border-radius:50%;" />
+        </a>
+        <a href="https://www.tiktok.com/@amajazzmalaga_" target="_blank"
+           style="width:60px;height:60px;background:#000;border-radius:50%;display:flex;align-items:center;justify-content:center;">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="32" height="32" fill="white">
+            <path d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 0 1-2.88 2.5 2.89 2.89 0 0 1-2.89-2.89 2.89 2.89 0 0 1 2.89-2.89c.28 0 .54.04.79.1V9.01a6.33 6.33 0 0 0-.79-.05 6.34 6.34 0 0 0-6.34 6.34 6.34 6.34 0 0 0 6.34 6.34 6.34 6.34 0 0 0 6.33-6.34V8.69a8.17 8.17 0 0 0 4.78 1.52V6.75a4.85 4.85 0 0 1-1.01-.06z"/>
+          </svg>
+        </a>
+      </div>
+    </footer>
+
+    <script>
+      function enviarFormulario() {
+        const nombre = document.getElementById('nombre').value.trim();
+        const email = document.getElementById('email').value.trim();
+        const mensaje = document.getElementById('mensaje').value.trim();
+
+        if (!nombre || !email || !mensaje) {
+          alert('Por favor rellena todos los campos.');
+          return;
+        }
+
+        // Abre el cliente de email con los datos
+        const asunto = encodeURIComponent('Contacto desde amajazz.es – ' + nombre);
+        const cuerpo = encodeURIComponent('Nombre: ' + nombre + '\nEmail: ' + email + '\n\nMensaje:\n' + mensaje);
+        window.location.href = 'mailto:amajazzmalaga@gmail.com?subject=' + asunto + '&body=' + cuerpo;
+
+        document.getElementById('success').style.display = 'block';
+      }
+    </script>
+
+  </body>
+</html>
