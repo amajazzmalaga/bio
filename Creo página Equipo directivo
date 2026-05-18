@@ -76,13 +76,14 @@
         padding: 24px;
         text-align: center;
       }
-      .member-card img {
-        width: 100px;
-        height: 100px;
-        border-radius: 50%;
-        object-fit: cover;
-        margin-bottom: 16px;
-      }
+     .member-card img {
+  width: 100px !important;
+  height: 100px !important;
+  max-width: 100px !important;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 16px;
+}
       .member-card h3 { font-size: 17px; font-weight: 600; color: #fff; margin: 0 0 4px; }
       .member-card .cargo { font-size: 13px; color: #fff; font-weight: 600; margin: 0 0 10px; }
       .member-card .desc { font-size: 13px; color: #fff; line-height: 1.5; margin: 0; }
